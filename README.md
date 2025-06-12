@@ -1,2 +1,2 @@
-# clatresume
-AI powered resume modifier for linkedin jobs
+# the extension for resume generator
+This is the extension code for the resume generator.
