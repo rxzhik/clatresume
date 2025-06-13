@@ -5,10 +5,82 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Generate My Resume</title>
 		<link rel="stylesheet" href="bulma.min.css" />
+		<style>
+			body {
+				margin: 0;
+				padding: 10px;
+				display: flex;
+				border: 2px solid;
+				width: 350px;
+				border-image: linear-gradient(
+						135deg,
+						#a259ff,
+						#6a11cb,
+						#2575fc,
+						#a259ff
+					)
+					1;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="container m-3">
-			<h1 class="title">Generate My Resume</h1>
+		<style>
+			.button.is-dark {
+				transition: 0.4s;
+				background: #222;
+			}
+			.button.is-dark:hover {
+				background: linear-gradient(135deg, #a259ff, #6a11cb, #2575fc, #a259ff);
+				transform: scale(1.1);
+				color: #fff;
+			}
+
+			.image.is-48x48 {
+				transition: transform 0.4s;
+			}
+			.image-label-container:hover .image.is-48x48 {
+				transform: translateY(-3px);
+			}
+
+			.image-label-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+			.image-label {
+				display: none;
+				margin-top: 4px;
+				font-size: 0.9em;
+				color: #444;
+			}
+			.image-label-container:hover .image-label {
+				display: block !important;
+				position: relative;
+				top: -8px;
+			}
+		</style>
+		<div
+			class="container is-flex is-justify-content-center is-align-items-center mt-2 mb-2"
+			style="gap: 20px; height: 70px"
+		>
+			<div class="image-label-container">
+				<img
+					src="../images/icon48.png"
+					alt="Icon"
+					class="image is-48x48"
+					style="border-radius: 50%"
+				/>
+				<span class="image-label" style="color: white">Home</span>
+			</div>
+			<div class="image-label-container">
+				<img
+					src="../images/checklist-icon48.png"
+					alt="Icon"
+					class="image is-48x48"
+					style="border-radius: 50%"
+				/>
+				<span class="image-label" style="color: white">Job List</span>
+			</div>
 			<button class="button is-dark">Generate Resume</button>
 		</div>
 	</body>
