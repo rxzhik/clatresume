@@ -1,0 +1,19 @@
+{
+	"manifest_version": 3,
+	"name": "Generate My Resume",
+	"version": "1.0",
+	"description": "A Chrome extension to help users generate job specific resumes with just a click of a button. The resumes follow the best practices of resume writing and are tailored to the job description provided by the user.",
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/icon-16.png",
+			"48": "images/icon-48.png",
+			"128": "images/icon-128.png"
+		},
+		"background": {
+			"service_worker": "background.js",
+			"type": "module"
+		},
+		"permissions": ["storage"]
+	}
+}
