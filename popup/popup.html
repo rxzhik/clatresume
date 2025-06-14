@@ -8,8 +8,6 @@
 		<style>
 			body {
 				margin: 0;
-				padding: 10px;
-				display: flex;
 				border: 2px solid;
 				width: 350px;
 				border-image: linear-gradient(
@@ -39,7 +37,7 @@
 				transition: transform 0.4s;
 			}
 			.image-label-container:hover .image.is-48x48 {
-				transform: translateY(-3px);
+				transform: translateY(-2px);
 			}
 
 			.image-label-container {
@@ -67,7 +65,8 @@
 				<img
 					src="../images/icon48.png"
 					alt="Icon"
-					class="image is-48x48"
+					class="image is-48x48 home"
+					id="home-img"
 					style="border-radius: 50%"
 				/>
 				<span class="image-label" style="color: white">Home</span>
@@ -77,11 +76,41 @@
 					src="../images/checklist-icon48.png"
 					alt="Icon"
 					class="image is-48x48"
+					id="checklist-img"
 					style="border-radius: 50%"
 				/>
 				<span class="image-label" style="color: white">Job List</span>
 			</div>
-			<button class="button is-dark">Generate Resume</button>
+			<button id="generate-button" class="button is-dark" style="width: 160px">
+				Generate Resume
+			</button>
+		</div>
+		<!-- Job List Div (hidden by default) -->
+		<div
+			id="job-list-div"
+			style="
+				display: none;
+				width: 100%;
+				height: 180px;
+				overflow-y: auto;
+				background: #181a20;
+				border-radius: 12px;
+				margin: 0 auto;
+				margin-top: 10px;
+				padding: 10px;
+				color: #fff;
+				box-sizing: border-box;
+			"
+		>
+			<h4 style="margin: 0 0 10px 0; color: #a259ff">Generated Resumes</h4>
+			<ul id="job-list" style="list-style: none; padding: 0; margin: 0"></ul>
+			<div
+				id="no-jobs-msg"
+				style="color: #aaa; text-align: center; display: none"
+			>
+				No resumes generated yet.
+			</div>
 		</div>
 	</body>
+	<script src="popup.js"></script>
 </html>
